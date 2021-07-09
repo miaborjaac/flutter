@@ -28,7 +28,11 @@ class DescriptionPlace extends StatelessWidget {
           margin: EdgeInsets.only(top: 320.0, left: 20.0, right: 20.0),
           child: Text(
             namePlace,
-            style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.w900),
+            style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.w900,
+              fontFamily: "Lato",
+            ),
             textAlign: TextAlign.left,
           ),
         ),
@@ -40,12 +44,16 @@ class DescriptionPlace extends StatelessWidget {
 
     final description = Container(
       margin: new EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
-      child: new Text(descriptionPlace,
-          style: const TextStyle(
-            fontSize: 16.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.black54,
-          )),
+      child: new Text(
+        descriptionPlace,
+        style: const TextStyle(
+          fontFamily: "Lato",
+          fontSize: 16.0,
+          fontWeight: FontWeight.w900,
+          color: Colors.black54,
+        ),
+        textAlign: TextAlign.left,
+      ),
     );
 
     return Column(
