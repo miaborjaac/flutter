@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
@@ -41,13 +40,12 @@ class DescriptionPlace extends StatelessWidget {
 
     final description = Container(
       margin: new EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
-      child: new Text(
-        descriptionPlace,
-        style: const TextStyle(
+      child: new Text(descriptionPlace,
+          style: const TextStyle(
             fontSize: 16.0,
             fontWeight: FontWeight.bold,
-            color: Color(0xFF56575a)),
-      ),
+            color: Colors.black54,
+          )),
     );
 
     return Column(
