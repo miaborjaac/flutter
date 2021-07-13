@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_examples/contacts_list/contact_list.dart';
 import 'package:flutter_examples/header_appbar.dart';
 import 'package:flutter_examples/review_list.dart';
 import 'description_place.dart';
@@ -25,15 +26,20 @@ class MyApp extends StatelessWidget {
         //       textAlign: TextAlign.center,
         //       style: TextStyle(color: Colors.white)),
         // ),
+        // body: Stack(
+        //   children: <Widget>[
+        //     ListView(
+        //       children: <Widget>[
+        //         DescriptionPlace("Bahamas", 4, descriptionDummy),
+        //         ReviewList(),
+        //       ],
+        //     ),
+        //     HeaderAppBar(),
+        //   ],
+        // ),
         body: Stack(
-          children: <Widget>[
-            ListView(
-              children: <Widget>[
-                DescriptionPlace("Bahamas", 4, descriptionDummy),
-                ReviewList(),
-              ],
-            ),
-            HeaderAppBar(),
+          children: [
+            ContactList(),
           ],
         ),
       ),
