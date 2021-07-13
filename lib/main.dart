@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_examples/background_gradient.dart';
+import 'package:flutter_examples/header_appbar.dart';
 import 'package:flutter_examples/review_list.dart';
 import 'description_place.dart';
 
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
                 ReviewList(),
               ],
             ),
-            BackgroundGradient("Popular"),
+            HeaderAppBar(),
           ],
         ),
       ),
