@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
                 ReviewList(),
               ],
             ),
-            BackgroundGradient(),
+            BackgroundGradient("Popular"),
           ],
         ),
       ),
