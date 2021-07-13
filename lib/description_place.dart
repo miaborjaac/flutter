@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_examples/subcomponents/star_constants.dart';
 
 class DescriptionPlace extends StatelessWidget {
   String namePlace;
@@ -9,23 +10,10 @@ class DescriptionPlace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final starHalf = Container(
-      margin: EdgeInsets.only(top: 323.0, right: 3.0),
-      child: Icon(Icons.star_half, color: Colors.yellow),
-    );
-
-    final starBorder = Container(
-        margin: EdgeInsets.only(top: 323.0, right: 3.0),
-        child: Icon(Icons.star_border, color: Colors.yellow));
-
-    final star = Container(
-        margin: EdgeInsets.only(top: 323.0, right: 3.0),
-        child: Icon(Icons.star, color: Colors.yellow));
-
     final titleStars = Row(
       children: <Widget>[
         Container(
-          margin: EdgeInsets.only(top: 320.0, left: 20.0, right: 20.0),
+          margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 350.0),
           child: Text(
             namePlace,
             style: TextStyle(
@@ -37,7 +25,14 @@ class DescriptionPlace extends StatelessWidget {
           ),
         ),
         Row(
-          children: <Widget>[star, star, star, starHalf, starBorder],
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(top: 350.0),
+              child: Row(
+                children: <Widget>[star, star, star, starHalf, starBorder],
+              ),
+            )
+          ],
         )
       ],
     );
