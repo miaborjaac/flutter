@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_examples/contacts_list/contact_header.dart';
 import 'package:flutter_examples/contacts_list/contact_list.dart';
 import 'package:flutter_examples/header_appbar.dart';
 import 'package:flutter_examples/review_list.dart';
@@ -39,7 +40,11 @@ class MyApp extends StatelessWidget {
         // ),
         body: Stack(
           children: [
-            ContactList(),
+            Container(
+              margin: EdgeInsets.only(top: 50.0),
+              child: ContactList(),
+            ),
+            ContactHeader(),
           ],
         ),
       ),

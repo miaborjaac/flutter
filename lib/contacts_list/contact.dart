@@ -9,21 +9,25 @@ class Contact extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final photo = Container(
-      margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
-      width: 50.0,
-      height: 50.0,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage("assets/img/Gal_Gadot.jpg"),
-        ),
-      ),
+    final photo = Column(
+      children: [
+        Container(
+          margin: EdgeInsets.only(left: 20.0, top: 10.0),
+          width: 80.0,
+          height: 80.0,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              fit: BoxFit.cover,
+              image: AssetImage("assets/img/Gal_Gadot.jpg"),
+            ),
+          ),
+        )
+      ],
     );
 
     final name = Container(
-      margin: EdgeInsets.only(top: 10.0),
+      margin: EdgeInsets.only(left: 20.0, top: 10.0),
       child: Text(
         contactName,
         style: TextStyle(
@@ -35,7 +39,7 @@ class Contact extends StatelessWidget {
     );
 
     final description = Container(
-      margin: EdgeInsets.only(top: 10.0),
+      margin: EdgeInsets.only(left: 20.0, top: 5),
       child: Text(
         contactDescription,
         style: TextStyle(
@@ -53,19 +57,34 @@ class Contact extends StatelessWidget {
       ],
     );
 
-    final contactButton = Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        ContactButton(),
-      ],
+    final contactButton = Container(
+      child: ContactButton(contactName),
     );
 
-    return Row(
-      children: [
-        photo,
-        information,
-        contactButton,
-      ],
+    return Container(
+      padding: EdgeInsets.only(right: 20.0),
+      decoration: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(width: 1, color: Colors.black38),
+        ),
+      ),
+      height: 110.0,
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Row(children: [
+            Expanded(
+              child: Row(
+                children: [
+                  photo,
+                  information,
+                ],
+              ),
+            ),
+            contactButton,
+          ])
+        ],
+      ),
     );
   }
 }
